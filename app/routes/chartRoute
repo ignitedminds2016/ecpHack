@@ -9,6 +9,14 @@ var Transactions = require('../models/AmxDataViews');
 module.exports = function(app) {
 
  app.get('/api/data', function(req, res) {
+   var stateid = req.param('state');
+  var income_level1 = req.param('income_level');
+
+  console.log(stateid);
+  console.log(income_level1);
+  console.log('---------------------------------------------------------------------------------------------------');
+  console.log("---------------------------------------------------------------------------------------------------xx");
+  
   // use mongoose to get data
   Transactions.find({}, {'_id': 0, 'merchant_name': 1, 'spending_type': 1, 'zip_code': 1, 'date_posted': 1, 'total_spendings': 1, 'payment_type': 1}, function(err, transactionsDetails) {
  

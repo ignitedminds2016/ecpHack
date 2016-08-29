@@ -10,7 +10,7 @@ function makeGraphs(error, apiData) {
 	dataSet.forEach(function(d) {
 		d.date_posted = dateFormat.parse(d.date_posted);
 				d.date_posted.setDate(1);
-		d.total_spendings = +d.total_spendings;
+		d.total_spendings = +d.transaction_amount;
 	});
 
 	//Crossfilter instance

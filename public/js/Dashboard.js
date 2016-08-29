@@ -62,6 +62,14 @@ console.log(maxDate);
         .dimension(merchant)
         .group(merchantGroup); 
 
+		selectField = dc.selectMenu('#menuselect1')
+        .dimension(zipcode)
+        .group(transactionsByZipcode); 
+
+		  selectField = dc.selectMenu('#filterselect')
+        .dimension(spendingType)
+        .group(transactionsBySpendingType); 
+
        dc.dataCount("#row-selection")
         .dimension(cf)
         .group(all);

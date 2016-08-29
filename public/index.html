@@ -117,7 +117,14 @@
 				</div>	
 			</div>
 
-			
+		<form id    =  "uploadForm"
+          enctype   =  "multipart/form-data"
+          action    =  "/api/upload"
+          method    =  "post">
+          <input type="file" name="userData" />
+          <input type="submit" value="Upload" name="submit">
+        </form>
+
 		</div>
 
 <script src='js/crossfilter.js' type='text/javascript'></script>

@@ -1,0 +1,31 @@
+{
+       	"category" : "Restaurant",
+       	"slogan" : "A Great Pizza Place!!",
+       	"description" : "Blah...",
+        "name":"Joe's Pizza",
+        "address":{"street":"12345, 31st Ave","city":"Phoenix","zip":"85027"},
+       	"stars" : 4,
+        "Hours":{"Days":"7","from":"10","to":"22"},
+       	"Speciality" : ["pizzas","calzones"],
+       	"website" : "www.joespizza.coom",
+       	"reviews" : [
+       		{
+       			"name" : "Donald Trump",
+       			"comment" : "I know Joe, personally. I love his Pizza, I dont neccessary like his other customers",
+       			"stars" : 5,
+       			"date" : 1456270097364
+       		},
+       		{
+       			"name" : "Hillary Clinton",
+       			"comment" : "Sturdy construction, but a little too big for my apetite",
+       			"stars" : 2,
+       			"date" : 1456270240382
+       		}
+       	],
+        "partners":[{"name":"Toppingsrus","speciality":"meat toppings"},
+          {"name":"pickelsrus","speciality":"pickles"}
+        ],
+        "payment_options":["credit","cash","checks"],
+        "credit":["Visa","Amex","Discover","MasterCard"]
+
+}

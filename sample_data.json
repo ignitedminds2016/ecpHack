@@ -26,6 +26,167 @@
           {"name":"pickelsrus","speciality":"pickles"}
         ],
         "payment_options":["credit","cash","checks"],
-        "credit":["Visa","Amex","Discover","MasterCard"]
-
+        "credit":["Visa","Amex","Discover","MasterCard","others"],
+        "2016":{"jan":10,"feb":10,"march":10,"apr":15,"may":20,"june":25,"july":25,"aug":10,"sep":10,"oct":10,"nov":30,"dec":30},
+        "2016_by_payment_type":{"mastercard":20,"visa":45,"discover":"10","amex":10,"others":15}
+}
+{
+       	"category" : "Restaurant",
+       	"slogan" : "A Great Pizza Place!!",
+       	"description" : "Blah...",
+        "name":"Andrea Pizza",
+        "address":{"street":"12345, 31st Ave","city":"Phoenix","zip":"85027"},
+       	"stars" : 4,
+        "Hours":{"Days":"7","from":"10","to":"22"},
+       	"Speciality" : ["pizzas","calzones"],
+       	"website" : "www.andreaspizza.coom",
+       	"reviews" : [
+       		{
+       			"name" : "Donald Trump",
+       			"comment" : "I know Joe, personally. I love his Pizza, I dont neccessary like his other customers",
+       			"stars" : 5,
+       			"date" : 1456270097364
+       		},
+       		{
+       			"name" : "Hillary Clinton",
+       			"comment" : "Sturdy construction, but a little too big for my apetite",
+       			"stars" : 2,
+       			"date" : 1456270240382
+       		}
+       	],
+        "partners":[{"name":"Toppingsrus","speciality":"meat toppings"},
+          {"name":"pickelsrus","speciality":"pickles"}
+        ],
+        "payment_options":["credit","cash","checks"],
+        "credit":["Visa","Amex","Discover","MasterCard","others"],
+        "2016":{"jan":15,"feb":15,"march":10,"apr":20,"may":20,"june":20,"july":25,"aug":10,"sep":10,"oct":10,"nov":30,"dec":30},
+        "2016_by_payment_type":{"mastercard":20,"visa":45,"discover":"10","amex":25}
+}
+{
+       	"category" : "Restaurant",
+       	"slogan" : "A Great Pizza Place!!",
+       	"description" : "Blah...",
+        "name":"Lorenzo's Pizza",
+        "address":{"street":"12345, 31st Ave","city":"Phoenix","zip":"85027"},
+       	"stars" : 4,
+        "Hours":{"Days":"7","from":"10","to":"22"},
+       	"Speciality" : ["pizzas","calzones"],
+       	"website" : "www.lorenzospizza.coom",
+       	"reviews" : [
+       		{
+       			"name" : "Donald Trump",
+       			"comment" : "I know Joe, personally. I love his Pizza, I dont neccessary like his other customers",
+       			"stars" : 5,
+       			"date" : 1456270097364
+       		},
+       		{
+       			"name" : "Hillary Clinton",
+       			"comment" : "Sturdy construction, but a little too big for my apetite",
+       			"stars" : 2,
+       			"date" : 1456270240382
+       		}
+       	],
+        "partners":[{"name":"Toppingsrus","speciality":"meat toppings"},
+          {"name":"pickelsrus","speciality":"pickles"}
+        ],
+        "payment_options":["credit","cash","checks"],
+        "credit":["Visa","Amex","Discover","MasterCard","others"],
+        "2016":{"jan":10,"feb":10,"march":10,"apr":15,"may":20,"june":5,"july":5,"aug":15,"sep":10,"oct":10,"nov":15,"dec":10},
+        "2016_by_payment_type":{"mastercard":20,"visa":45,"discover":"10","others":25}
+}
+{
+       	"category" : "Restaurant",
+       	"slogan" : "A Great Pizza Place!!",
+       	"description" : "Blah...",
+        "name":"Mama's Pizza",
+        "address":{"street":"12345, 31st Ave","city":"Phoenix","zip":"85027"},
+       	"stars" : 4,
+        "Hours":{"Days":"7","from":"10","to":"22"},
+       	"Speciality" : ["pizzas","calzones"],
+       	"website" : "www.mamaspizza.coom",
+       	"reviews" : [
+       		{
+       			"name" : "Donald Trump",
+       			"comment" : "I know Joe, personally. I love his Pizza, I dont neccessary like his other customers",
+       			"stars" : 5,
+       			"date" : 1456270097364
+       		},
+       		{
+       			"name" : "Hillary Clinton",
+       			"comment" : "Sturdy construction, but a little too big for my apetite",
+       			"stars" : 2,
+       			"date" : 1456270240382
+       		}
+       	],
+        "partners":[{"name":"Toppingsrus","speciality":"meat toppings"},
+          {"name":"pickelsrus","speciality":"pickles"}
+        ],
+        "payment_options":["credit","cash","checks"],
+        "credit":["Visa","Amex","Discover","MasterCard","others"],
+        "2016":{"jan":30,"feb":30,"march":15,"apr":15,"may":25,"june":25,"july":25,"aug":10,"sep":10,"oct":10,"nov":35,"dec":35},
+        "2016_by_payment_type":{"mastercard":20,"visa":10,"discover":"10","amex":45,"others":15}
+}
+{
+       	"category" : "Restaurant",
+       	"slogan" : "A Great Pizza Place!!",
+       	"description" : "Blah...",
+        "name":"Miranda's Pizza",
+        "address":{"street":"12345, 31st Ave","city":"Phoenix","zip":"85027"},
+       	"stars" : 4,
+        "Hours":{"Days":"7","from":"10","to":"22"},
+       	"Speciality" : ["pizzas","calzones"],
+       	"website" : "www.mirandaspizza.coom",
+       	"reviews" : [
+       		{
+       			"name" : "Donald Trump",
+       			"comment" : "I know Joe, personally. I love his Pizza, I dont neccessary like his other customers",
+       			"stars" : 5,
+       			"date" : 1456270097364
+       		},
+       		{
+       			"name" : "Hillary Clinton",
+       			"comment" : "Sturdy construction, but a little too big for my apetite",
+       			"stars" : 2,
+       			"date" : 1456270240382
+       		}
+       	],
+        "partners":[{"name":"Toppingsrus","speciality":"meat toppings"},
+          {"name":"pickelsrus","speciality":"pickles"}
+        ],
+        "payment_options":["credit","cash","checks"],
+        "credit":["Visa","Amex","Discover","MasterCard","others"],
+        "2016":{"jan":10,"feb":10,"march":10,"apr":15,"may":20,"june":25,"july":25,"aug":10,"sep":10,"oct":10,"nov":30,"dec":30},
+        "2016_by_payment_type":{"mastercard":25,"visa":40,"discover":"10","amex":10,"others":15}
+}
+{
+       	"category" : "Restaurant",
+       	"slogan" : "A Great Pizza Place!!",
+       	"description" : "Blah...",
+        "name":"Antonio's Pizza",
+        "address":{"street":"12345, 31st Ave","city":"Phoenix","zip":"85027"},
+       	"stars" : 4,
+        "Hours":{"Days":"7","from":"10","to":"22"},
+       	"Speciality" : ["pizzas","calzones"],
+       	"website" : "www.Antoniopizza.coom",
+       	"reviews" : [
+       		{
+       			"name" : "Donald Trump",
+       			"comment" : "I know Joe, personally. I love his Pizza, I dont neccessary like his other customers",
+       			"stars" : 5,
+       			"date" : 1456270097364
+       		},
+       		{
+       			"name" : "Hillary Clinton",
+       			"comment" : "Sturdy construction, but a little too big for my apetite",
+       			"stars" : 2,
+       			"date" : 1456270240382
+       		}
+       	],
+        "partners":[{"name":"Toppingsrus","speciality":"meat toppings"},
+          {"name":"pickelsrus","speciality":"pickles"}
+        ],
+        "payment_options":["credit","cash","checks"],
+        "credit":["Visa","Amex","Discover","MasterCard","others"],
+        "2016":{"jan":10,"feb":10,"march":10,"apr":15,"may":20,"june":15,"july":15,"aug":10,"sep":10,"oct":10,"nov":20,"dec":20},
+        "2016_by_payment_type":{"mastercard":30,"visa":30,"discover":"15","others":25}
 }

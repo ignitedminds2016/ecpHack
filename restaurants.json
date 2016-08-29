@@ -1,0 +1,25 @@
+{
+"merchant_name":"Joe's Pizza",
+"category":"Restaurant",
+"payment_type":"Amex",
+"zipcode":85027,
+"transaction_amount":"100",
+"date_posted":"12/12/2016"
+}
+{
+"merchant_name":"Joe's Pizza",
+"category":"Restaurant",
+"payment_type":"Discover",
+"zipcode":85027,
+"transaction_amount":"300",
+"date_posted":"12/12/2016"
+}
+{
+"merchant_name":"Joe's Pizza",
+"category":"Restaurant",
+"payment_type":"Visa",
+"zipcode":85027,
+"transaction_amount":"300",
+"date_posted":"12/12/2016"
+}
+

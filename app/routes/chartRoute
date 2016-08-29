@@ -9,8 +9,8 @@ var Transactions = require('../models/AmxDataViews');
 module.exports = function(app) {
 
  app.get('/api/data', function(req, res) {
-   var stateid = req.param('state');
-  var income_level1 = req.param('income_level');
+   var stateid = req.param('zipcode');
+  var income_level1 = req.param('category');
 
   console.log(stateid);
   console.log(income_level1);
@@ -37,7 +37,7 @@ if((stateid===undefined) && (income_level1===undefined)){
    });
   }else{
   console.log('--ELSE--');
-  Transactions.find({state:stateid, income_level:income_level1}, {'_id': 0, 'merchant_name': 1, 'category': 1, 'zipcode': 1, 'date_posted': 1, 'transaction_amount': 1, 'payment_type': 1}, function(err, transactionsDetails) {
+  Transactions.find({zipcode:stateid, category:income_level1}, {'_id': 0, 'merchant_name': 1, 'category': 1, 'zipcode': 1, 'date_posted': 1, 'transaction_amount': 1, 'payment_type': 1}, function(err, transactionsDetails) {
  
    if (err) 
     res.send(err);

@@ -1,6 +1,25 @@
+function queryparams(){
+var selectedzip = $('#menuselect :selected').text();
+var selectedcat = $('#filterselect :selected').text();
+
+var zip = selectedzip.split(':');
+var cat = selectedcat.split(':');
+
+console.log(zip[0]);
+console.log(cat[0]);
+
+//cat = cat.replace(" ", "%20");
+loaddata(zip[0], cat[0]);
+
+
+}
+
+function loaddata(zip,cat){
 queue()
-    .defer(d3.json, "/api/data")
+    .defer(d3.json, "/api/data?state="+zip+"&income_level="+cat)
     .await(makeGraphs);
+
+}
 
 function makeGraphs(error, apiData) {
 	
@@ -18,57 +37,54 @@ function makeGraphs(error, apiData) {
 
 	//Define Dimensions
 	var datePosted = cf.dimension(function(d) { return d.date_posted; });
-	var paymentGroup = cf.dimension(function(d) { return d.payment_type; });
-	var spendingType = cf.dimension(function(d) { return d.category; });
-	var zipcode = cf.dimension(function(d) { return d.zipcode; });
-	var merchant = cf.dimension(function(d) { return d.merchant_name; });
+	var ageGroup = cf.dimension(function(d) { return d.age_group; });
+	var spendingType = cf.dimension(function(d) { return d.spending_type; });
+	var incomeLevel = cf.dimension(function(d) { return d.income_level; });
+	var state = cf.dimension(function(d) { return d.state; });
 
 
 	//Calculate by group
 	var transactionsByDate = datePosted.group(); 
-	var transactionsByPayment = paymentGroup.group(); 
+	var transactionsByAge = ageGroup.group(); 
 	var transactionsBySpendingType = spendingType.group();
-	var transactionsByZipcode = zipcode.group();
-	var merchantGroup = merchant.group();
+	var transactionsByIncomeLevel = incomeLevel.group();
+	var stateGroup = state.group();
 
 	var all = cf.groupAll();
 
 	// Total
-	var totalSpendingsMerchant = merchant.group().reduceSum(function(d) {
+	var totalSpendingsState = state.group().reduceSum(function(d) {
 		return d.total_spendings;
 	});
 
 
-	var netTotalSpendings = cf.groupAll().reduceSum(function(d) {return d.transaction_amount;});
+	var netTotalSpendings = cf.groupAll().reduceSum(function(d) {return d.total_spendings;});
 
 	//Define range values for data
 	var minDate = datePosted.bottom(1)[0].date_posted;
 	var maxDate = datePosted.top(1)[0].date_posted;
 
-console.log(minDate);
-console.log(maxDate);
+//console.log(minDate);
+//console.log(maxDate);
 
     //Charts
 	var dateChart = dc.lineChart("#date-chart");
-	var paymentGroupChart = dc.rowChart("#paymentGroup-chart");
+	var ageGroupChart = dc.rowChart("#ageGroup-chart");
 	var spendingTypeChart = dc.rowChart("#spending-chart");
-	var zipcodeChart = dc.rowChart("#zipcode-chart");
+	var incomeLevelChart = dc.rowChart("#income-chart");
 	var totalTransactions = dc.numberDisplay("#total-transactions");
 	var netSpendings = dc.numberDisplay("#net-spendings");
-	var merchantSpendings = dc.barChart("#merchant-spendings");
+	var stateSpendings = dc.barChart("#state-spendings");
 
 
   selectField = dc.selectMenu('#menuselect')
-        .dimension(merchant)
-        .group(merchantGroup); 
-
-		selectField = dc.selectMenu('#menuselect1')
-        .dimension(zipcode)
-        .group(transactionsByZipcode); 
-
-		selectField = dc.selectMenu('#filterselect')
-        .dimension(spendingType)
-        .group(transactionsBySpendingType); 
+        .dimension(state)
+        .group(stateGroup);
+        
+  selectField1 = dc.selectMenu('#filterselect')
+        .dimension(incomeLevel)
+        .group(transactionsByIncomeLevel);
+         
 
        dc.dataCount("#row-selection")
         .dimension(cf)
@@ -107,30 +123,30 @@ console.log(maxDate);
         .elasticX(true)
         .xAxis().ticks(5);
 
-	zipcodeChart
+	incomeLevelChart
 		//.width(300)
 		.height(220)
-        .dimension(zipcode)
-        .group(transactionsByZipcode)
+        .dimension(incomeLevel)
+        .group(transactionsByIncomeLevel)
         .xAxis().ticks(4);
 
-	paymentGroupChart
+	ageGroupChart
 		.height(220)
-        .dimension(paymentGroup)
-        .group(transactionsByPayment)
+        .dimension(ageGroup)
+        .group(transactionsByAge)
         .xAxis().ticks(4);
 
 
-    merchantSpendings
+    stateSpendings
         .height(220)
         .transitionDuration(1000)
-        .dimension(merchant)
-        .group(totalSpendingsMerchant)
+        .dimension(state)
+        .group(totalSpendingsState)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .centerBar(false)
         .gap(5)
         .elasticY(true)
-        .x(d3.scale.ordinal().domain(merchant))
+        .x(d3.scale.ordinal().domain(state))
         .xUnits(dc.units.ordinal)
         .renderHorizontalGridLines(true)
         .renderVerticalGridLines(true)

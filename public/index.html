@@ -28,7 +28,7 @@
 					
 					<!-- Logo -->
 					<div id="logo">
-						<h1><a href="#">AMX CreditCard Spending Analysis</a></h1>
+						<h1><a href="#">Merchant Sales Analysis</a></h1>
 					</div>
 					
 					<!-- Nav -->
@@ -43,7 +43,7 @@
 
 					<div class="row">
 						<div class="2u chart-wrapper" id="menuselect" style="background-color: #FFCC00; height: 60px;">
-							<div class="chart-title">  <strong> By State  </strong> </div>					
+							<div class="chart-title">  <strong> By Merchant  </strong> </div>					
 						</div>
 
 						<div class="2u">
@@ -55,7 +55,7 @@
 						</div>
 
 						<div class="2u chart-wrapper" id="net-spendings" style="background-color: #FFCC00; height: 60px;text-align: center;">
-							<div class="chart-title">  <strong> Spending Amount ($) </strong> </div>					
+							<div class="chart-title">  <strong> Sales Amount ($) </strong> </div>					
 						</div>
 
 						<div class="2u">
@@ -85,8 +85,8 @@
 
 					<div class="row">
 
-						<div class="4u chart-wrapper"  id="state-spendings">
-							<div class="chart-title">  <strong> Spending Amount by State ($) </strong> 
+						<div class="4u chart-wrapper"  id="merchant-spendings">
+							<div class="chart-title">  <strong> Sales Amount by Merchant ($) </strong> 
 							</div>
 						</div>
 
@@ -100,17 +100,21 @@
 					</div>
 
 					<div class="row">
-						<div class="4u chart-wrapper"  id="ageGroup-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Age Group </strong> </div>
+						<div class="4u chart-wrapper"  id="paymentGroup-chart">
+							<div class="chart-title">  <strong> Number of Transactions by Payment Type </strong> </div>
 						</div>
-						<div class="4u chart-wrapper" id="income-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Income Level </strong>
+
+						
+						<div class="4u chart-wrapper" id="zipcode-chart">
+							<div class="chart-title">  <strong> Number of Transactions by ZipCode </strong>
 						 	</div>	
 						</div>
+						
 						<div class="3u chart-wrapper" id="spending-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Spending Type </strong> 
+							<div class="chart-title">  <strong> Number of Transactions by Category </strong> 
 							</div>							
 						</div>
+						
 
 					</div>
 
@@ -122,7 +126,7 @@
           action    =  "/api/upload"
           method    =  "post">
           <input type="file" name="userData" />
-          <input type="submit" value="Upload" name="submit">
+          <input type="submit" value="Upload CSV Data" name="submit">
         </form>
 
 		</div>

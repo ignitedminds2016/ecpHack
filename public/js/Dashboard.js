@@ -35,7 +35,7 @@ function makeGraphs(error, apiData) {
 
 	// Total
 	var totalSpendingsMerchant = merchant.group().reduceSum(function(d) {
-		return d.total_spendings;
+		return d.transaction_amount;
 	});
 
 
@@ -45,7 +45,7 @@ function makeGraphs(error, apiData) {
 	var minDate = datePosted.bottom(1)[0].date_posted;
 	var maxDate = datePosted.top(1)[0].date_posted;
 
-console.log(minDate);
+console.log("888888 I am here:" + minDate);
 console.log(maxDate);
 
     //Charts

@@ -19,8 +19,8 @@ function makeGraphs(error, apiData) {
 	//Define Dimensions
 	var datePosted = cf.dimension(function(d) { return d.date_posted; });
 	var paymentGroup = cf.dimension(function(d) { return d.payment_type; });
-	var spendingType = cf.dimension(function(d) { return d.spending_type; });
-	var zipcode = cf.dimension(function(d) { return d.zip_code; });
+	var spendingType = cf.dimension(function(d) { return d.category; });
+	var zipcode = cf.dimension(function(d) { return d.zipcode; });
 	var merchant = cf.dimension(function(d) { return d.merchant_name; });
 
 
@@ -39,7 +39,7 @@ function makeGraphs(error, apiData) {
 	});
 
 
-	var netTotalSpendings = cf.groupAll().reduceSum(function(d) {return d.total_spendings;});
+	var netTotalSpendings = cf.groupAll().reduceSum(function(d) {return d.transaction_amount;});
 
 	//Define range values for data
 	var minDate = datePosted.bottom(1)[0].date_posted;
@@ -66,7 +66,7 @@ console.log(maxDate);
         .dimension(zipcode)
         .group(transactionsByZipcode); 
 
-		  selectField = dc.selectMenu('#filterselect')
+		selectField = dc.selectMenu('#filterselect')
         .dimension(spendingType)
         .group(transactionsBySpendingType); 
 

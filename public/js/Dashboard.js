@@ -126,7 +126,7 @@ console.log(maxDate);
         .transitionDuration(1000)
         .dimension(merchant)
         .group(totalSpendingsMerchant)
-        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .margins({top: 10, right: 50, bottom: 80, left: 50})
         .centerBar(false)
         .gap(5)
         .elasticY(true)

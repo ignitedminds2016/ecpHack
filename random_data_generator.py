@@ -44,7 +44,7 @@ for line in fp:
         else :
            min = 20 if ai is 1 else 10
            max = 100 if ai is 1 else 90
-    for i in range(1,int(entries)):
-          createJson( name,category,amex,z,min,max)
+        for i in range(1,int(entries)):
+             createJson( name,category,amex,z,min,max)
 
 

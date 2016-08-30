@@ -17,5 +17,22 @@ ul.nav a:hover {
 }
 
 .frame {
-    background-color: #Fff;
+    background-color: #fff;
+    margin-bottom: 4%;
+}
+
+.number-display{
+    display:block;
+    text-align: center;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.projections {
+    display:block;
+    text-align: center;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
 }

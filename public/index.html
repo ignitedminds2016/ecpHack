@@ -55,7 +55,7 @@
 				<nav class="navbar navbar-default">
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<a class="navbar-brand" href="#">YAMM</a>
+							<a class="navbar-brand" href="#"><img class="img-responsive" src="images/logo1.png" style="margin-top:-45%" /></a>
 							<li><a href="#home" onClick="showhome()">Home</a></li>
 				  			<li><a href="#fileupload" onClick="showfileUpload()">File Upload</a></li>
 				  			<li><a href="#faq">FAQs</a></li>
@@ -66,7 +66,7 @@
 
 				<div class="container">
 					<div id="filters" style="display: inline;">
-						<div class="frame">
+						<div class="frame col-md-4">
 							<div class="distance-y" id="menuselect1">
 								<label>Zip Code:</label>
 							</div>
@@ -74,24 +74,21 @@
 								<label>Category:</label>
 							</div>
 							<div id="filterselect1">
-								<button type="button" class="btn btn-primary distance-x" id="submitbutton" onClick="submitbutton()">YAMM IT!</button>
-								<button type="button" class="btn btn-primary" onClick="resetData()">Reset All</button>
+								<button type="button" class="btn btn-sm btn-primary distance-x" id="submitbutton" onClick="submitbutton()">YAMM IT!</button>
+								<button type="button" class="btn btn-sm btn-primary" onClick="resetData()">Reset All</button>
 							</div>
 						</div>
+						<div class="col-md-4" id="net-spendings">
+								<label class="projections"> Sales Amount ($): </label>
+							</div>
+
+							<div class="col-md-4" id="total-transactions">
+								<label class="projections"> Total Transactions: </label>
+							</div>
 					</div>
 
 
 					<div id="home" style="display: inline;">
-
-						<div class="row">
-							<div class="col-md-6" id="net-spendings">
-								<strong> Sales Amount ($) </strong>
-							</div>
-
-							<div class="col-md-6" id="total-transactions">
-								<strong> Total Transactions </strong>
-							</div>
-						</div>
 
 						<div class="row">
 							<div class="col-md-12" id="merchant-spendings">

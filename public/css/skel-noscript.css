@@ -25,7 +25,7 @@
 	}
 
 	/* Modifiers */
-	
+
 		.container.small {
 			width: 900px;
 		}
@@ -65,7 +65,7 @@
 		.\-1u { margin-left: 8.3333333333% }
 
 		.row > * {
-			padding: 50px 0 0 50px;
+			padding: 50px 0 0 17px;
 			float: left;
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;

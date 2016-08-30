@@ -27,9 +27,10 @@ for line in fp:
     amex=values[2]
 
     entries=200
-    zip=randrange( 85025,85029)
+    #zip=randrange( 85025,85029)
     #print name,category,amex,zip
-    for i in range(1,int(entries)):
-      createJson( name,category,amex,zip)
+    for z in range(85025, 85029):
+      for i in range(1,int(entries)):
+          createJson( name,category,amex,z)
 
 

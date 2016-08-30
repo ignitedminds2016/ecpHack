@@ -1,13 +1,7 @@
 #Yet Another Marketing and Mining APP ( YammApp)
-Use update cutting edge technology to build a dynamic business intelligent web service to serve data analysis need including internal or external. 
+Yet another Metrics and Mining application, to help merchant get a bearing about how they are positioned against their peers. It's designed as responsive web application with intuitive data rendering Uses traditional MEAN framework, with Angular replaced with more intuitive D3.js. A seed data generation code also provided to develop further on the concept.
 
-We will try to build an intelligent data analysis and data reporting platform which facilitate target orintated marketing and sales 
-
-
-It should be highly dynamic, interactive and intuitable GUI rich web portal to help user  understand the meaning of historic data more easily and precisely.
-
-It will elinimate the confusion of multiple pages and multiple button navigation in traditional web application.
-
+Hope you enjoy using this application, love to hear from you as well.
 
 ##Technologies
 

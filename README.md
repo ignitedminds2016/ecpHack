@@ -1,4 +1,4 @@
-#BI Data Service
+#Yet Another Marketing and Mining APP ( YammApp)
 Use update cutting edge technology to build a dynamic business intelligent web service to serve data analysis need including internal or external. 
 
 We will try to build an intelligent data analysis and data reporting platform which facilitate target orintated marketing and sales 
@@ -9,7 +9,7 @@ It should be highly dynamic, interactive and intuitable GUI rich web portal to h
 It will elinimate the confusion of multiple pages and multiple button navigation in traditional web application.
 
 
-
+##Technologies
 
 ## D3.JS
 [D3.js](https://d3js.org/)
@@ -35,9 +35,7 @@ Express is a free open source web application framework for Node.js. It is desig
 3. Start your MongoDB
 
 4. Seed Data
-  ### mongoimport -d amx -c ccspendings --type csv --headerline --file seeddata.csv 
-  ### mongoimport -d amx -c ccspendings --type json  --file data.json --jsonArray
-
+	##random_data_generator.py generates multiple sets of data, to show demographics,spending ranges, locations etc...
 5. Start Server
 npm start
 

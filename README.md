@@ -35,7 +35,7 @@ Express is a free open source web application framework for Node.js. It is desig
 3. Start your MongoDB
 
 4. Seed Data
-	##random_data_generator.py generates multiple sets of data, to show demographics,spending ranges, locations etc...
+	random_data_generator.py generates multiple sets of data, to show demographics,spending ranges, locations etc...
 5. Start Server
 npm start
 

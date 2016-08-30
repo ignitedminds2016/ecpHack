@@ -36,3 +36,8 @@ ul.nav a:hover {
     font-size: 22px;
     font-weight: 400;
 }
+
+#merchant-spendings .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}

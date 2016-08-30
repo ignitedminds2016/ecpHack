@@ -122,7 +122,7 @@ console.log(maxDate);
 
 
     merchantSpendings
-        .height(220)
+        .height(300)
         .transitionDuration(1000)
         .dimension(merchant)
         .group(totalSpendingsMerchant)

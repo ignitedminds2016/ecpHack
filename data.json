@@ -1,4 +1,4 @@
-{"merchant_name":"Joe's Pizza","category":"Restaurant","payment_type":"Visa","zipcode":"85028","transaction_amount":"46","date_posted":"01/06/2014"},
+[{"merchant_name":"Joe's Pizza","category":"Restaurant","payment_type":"Visa","zipcode":"85028","transaction_amount":"46","date_posted":"01/06/2014"},
 {"merchant_name":"Joe's Pizza","category":"Restaurant","payment_type":"Other","zipcode":"85028","transaction_amount":"26","date_posted":"04/04/2016"},
 {"merchant_name":"Joe's Pizza","category":"Restaurant","payment_type":"Discover","zipcode":"85028","transaction_amount":"13","date_posted":"05/06/2016"},
 {"merchant_name":"Joe's Pizza","category":"Restaurant","payment_type":"Discover","zipcode":"85028","transaction_amount":"46","date_posted":"08/26/2014"},
@@ -4972,4 +4972,5 @@
 {"merchant_name":"Joe's Mills","category":"Retail Store","payment_type":"Discover","zipcode":"85026","transaction_amount":"12","date_posted":"02/26/2016"},
 {"merchant_name":"Joe's Mills","category":"Retail Store","payment_type":"Visa","zipcode":"85026","transaction_amount":"29","date_posted":"01/26/2014"},
 {"merchant_name":"Joe's Mills","category":"Retail Store","payment_type":"Discover","zipcode":"85026","transaction_amount":"45","date_posted":"03/17/2015"},
-{"merchant_name":"Joe's Mills","category":"Retail Store","payment_type":"Visa","zipcode":"85026","transaction_amount":"14","date_posted":"07/10/2014"},
+{"merchant_name":"Joe's Mills","category":"Retail Store","payment_type":"Visa","zipcode":"85026","transaction_amount":"14","date_posted":"07/10/2014"}
+]

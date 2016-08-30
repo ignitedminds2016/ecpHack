@@ -1,5 +1,4 @@
-#Yet Another Marketing and Mining APP ( YammApp)
-Introducing YAMM, Yet another Mininig and Marketing application.
+#Yet Another Mining and Marketing APP ( YammApp)
 
 An application to help Amex sales view what markets to target for merchant services
 Give Amex a view of the Market and where to direct sales

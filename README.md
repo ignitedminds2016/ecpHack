@@ -1,7 +1,11 @@
 #Yet Another Marketing and Mining APP ( YammApp)
-Yet another Metrics and Mining application, to help merchant get a bearing about how they are positioned against their peers. It's designed as responsive web application with intuitive data rendering Uses traditional MEAN framework, with Angular replaced with more intuitive D3.js. A seed data generation code also provided to develop further on the concept.
+Introducing YAMM, Yet another Mininig and Marketing application.
 
-Hope you enjoy using this application, love to hear from you as well.
+An application to help Amex sales view what markets to target for merchant services
+Give Amex a view of the Market and where to direct sales
+Help Amex merchants get a bearing about how they are positioned against their peer
+Help Amex merchants view the market for expansion into new territories
+
 
 ##Technologies
 

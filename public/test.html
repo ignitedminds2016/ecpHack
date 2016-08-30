@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/stylenew.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-			
+
 		<script language="javascript">
 			function showfileUpload(){
 			    $("#filters").hide();
@@ -55,19 +55,19 @@
 			  					<li><a href="#faq">FAQs</a></li>
 			  					<li><a href="#help">Help</a></li>
 						      </ul>
-						</div>      
+						</div>
 					</nav>
 				</div>
 
 				<div id="filters" style="display: inline;">
 					<div class="2u chart-wrapper" id="menuselect1" style="background-color: #FFCC00; height: 60px;">
-						<div class="chart-title">  <strong> By Zip Code </strong> </div>					
+						<div class="chart-title">  <strong> By Zip Code </strong> </div>
 					</div> &nbsp;
 					<div class="2u chart-wrapper" id="filterselect" style="background-color: #FFCC00; height: 60px;">
-						<div class="chart-title">  <strong> By Category </strong> </div>					
+						<div class="chart-title">  <strong> By Category </strong> </div>
 					</div>
-					<div class="2u chart-wrapper" id="filterselect" style="background-color: #FFCC00; height: 60px;">
-						<button id="submitbutton" onClick="submitbutton()">submit</button>					
+					<div class="2u chart-wrapper" id="filterselect1" style="background-color: #FFCC00; height: 60px;">
+						<button id="submitbutton" onClick="submitbutton()">submit</button>
 					</div>
 				</div>
 
@@ -77,24 +77,24 @@
 
 					<div class="row">
 						<div class="2u chart-wrapper" id="menuselect" style="background-color: #FFCC00; height: 60px;">
-							<div class="chart-title">  <strong> By State  </strong> </div>					
+							<div class="chart-title">  <strong> By Merchant  </strong> </div>
 						</div>
 
 						<div class="2u">
-							<div> 
-								<span> 
+							<div>
+								<span>
 									&nbsp
 							</span>
 							</div>
 						</div>
 
 						<div class="2u chart-wrapper" id="net-spendings" style="background-color: #FFCC00; height: 60px;text-align: center;">
-							<div class="chart-title">  <strong> Spending Amount ($) </strong> </div>					
+							<div class="chart-title">  <strong> Sales Amount ($) </strong> </div>
 						</div>
 
 						<div class="2u">
-							<div> 
-								<span> 
+							<div>
+								<span>
 									&nbsp
 							</span>
 							</div>
@@ -103,8 +103,8 @@
 							<div class="chart-title">  <strong> Total Transactions </strong> </div>
 						</div>
 
-						<div> 
-								<span> 
+						<div>
+								<span>
 									&nbsp
 							</span>
 							</div>
@@ -119,8 +119,8 @@
 
 					<div class="row">
 
-						<div class="4u chart-wrapper"  id="state-spendings">
-							<div class="chart-title">  <strong> Spending Amount by State ($) </strong> 
+						<div class="4u chart-wrapper"  id="merchant-spendings">
+							<div class="chart-title">  <strong> Sales Amount by Merchant ($) </strong>
 							</div>
 						</div>
 
@@ -129,26 +129,26 @@
 							<div class="chart-title bold"> <strong> Number of Transactions </strong></div>
 
 						</div>
-						
-						
+
+
 					</div>
 
 					<div class="row">
-						<div class="4u chart-wrapper"  id="ageGroup-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Age Group </strong> </div>
+						<div class="4u chart-wrapper"  id="paymentGroup-chart">
+							<div class="chart-title">  <strong> Number of Transactions by Payment Type </strong> </div>
 						</div>
-						<div class="4u chart-wrapper" id="income-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Income Level </strong>
-						 	</div>	
+						<div class="4u chart-wrapper" id="zipcode-chart">
+							<div class="chart-title">  <strong> Number of Transactions by ZipCode </strong>
+						 	</div>
 						</div>
 						<div class="3u chart-wrapper" id="spending-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Spending Type </strong> 
-							</div>							
+							<div class="chart-title">  <strong> Number of Transactions by Category </strong>
+							</div>
 						</div>
 
 					</div>
 
-				</div>	
+				</div>
 			</div>
 
 			<div id="fileupload" style="display: none;">
@@ -161,7 +161,7 @@
 	          <input type="submit" value="Upload" name="submit">
 	       	 </form>
 			</div>
-		</div>		
+		</div>
 
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' type="text/javascript"></script>
 		<script src='js/crossfilter.js' type='text/javascript'></script>

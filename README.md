@@ -35,7 +35,8 @@ Express is a free open source web application framework for Node.js. It is desig
 3. Start your MongoDB
 
 4. Seed Data
-mongoimport -d amx -c ccspendings --type csv --headerline --file seeddata.csv 
+  ### mongoimport -d amx -c ccspendings --type csv --headerline --file seeddata.csv 
+  ### mongoimport -d amx -c ccspendings --type json  --file data.json --jsonArray
 
 5. Start Server
 npm start

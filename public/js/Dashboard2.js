@@ -18,7 +18,12 @@ function loaddata(zip,cat){
 queue()
     .defer(d3.json, "/api/data?zipcode="+zip+"&category="+cat)
     .await(makeGraphs);
+}
 
+function loaddata1(){
+queue()
+    .defer(d3.json, "/api/data")
+    .await(makeGraphs);
 }
 
 // function makeGraphs(error, apiData) {

@@ -16,8 +16,6 @@
 
 		<link rel="stylesheet" href="css/dc.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/dc.css" />
-<link rel="stylesheet" href="css/stylenew.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
@@ -38,115 +36,82 @@
 			    $("#home").show();
 			    $("#fileupload").hide();
 			}
+			function resetData() {
+				location.reload();
+			}
 		</script>
 	</head>
 
 	<body>
 
 		<div class="wrapper">
-				<div class="container">
-
-					<nav class="navbar navbar-default">
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						      <ul class="nav navbar-nav">
-						        <a class="navbar-brand" href="#">YAMM</a>
-						        <li><a href="#home" onClick="showhome()">Home</a></li>
-			  					<li><a href="#fileupload" onClick="showfileUpload()">File Upload</a></li>
-			  					<li><a href="#faq">FAQs</a></li>
-			  					<li><a href="#help">Help</a></li>
-						      </ul>
-						</div>
-					</nav>
-				</div>
-
-				<div id="filters" style="display: inline;">
-					<div class="2u chart-wrapper" id="menuselect1" style="background-color: #FFCC00; height: 60px;">
-						<div class="chart-title">  <strong> By Zip Code </strong> </div>
-					</div> &nbsp;
-					<div class="2u chart-wrapper" id="filterselect" style="background-color: #FFCC00; height: 60px;">
-						<div class="chart-title">  <strong> By Category </strong> </div>
+				<nav class="navbar navbar-default">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<a class="navbar-brand" href="#">YAMM</a>
+							<li><a href="#home" onClick="showhome()">Home</a></li>
+				  			<li><a href="#fileupload" onClick="showfileUpload()">File Upload</a></li>
+				  			<li><a href="#faq">FAQs</a></li>
+				  			<li><a href="#help">Help</a></li>
+						</ul>
 					</div>
-					<div class="2u chart-wrapper" id="filterselect1" style="background-color: #FFCC00; height: 60px;">
-						<button id="submitbutton" onClick="submitbutton()">submit</button>
-					</div>
-				</div>
-
-				<div id="home" style="margin-top:+1px; display: none;">
+				</nav>
 
 				<div class="container">
-
-					<div class="row">
-						<div class="2u chart-wrapper" id="menuselect" style="background-color: #FFCC00; height: 60px;">
-							<div class="chart-title">  <strong> By Merchant  </strong> </div>
-						</div>
-
-						<div class="2u">
-							<div>
-								<span>
-									&nbsp
-							</span>
+					<div id="filters" style="display: inline;">
+						<div class="row">
+							<div class="col-md-3" id="menuselect1">
+								<strong> By Zip Code </strong>
+							</div>
+							<div class="col-md-3" id="filterselect">
+								<strong> By Category </strong>
+							</div>
+							<div class="col-md-3" id="filterselect1">
+								<button id="submitbutton" onClick="submitbutton()">submit</button>
+							</div>
+							<div class="col-md-3">
+								<button onClick="resetData()">Reset All</button>
 							</div>
 						</div>
-
-						<div class="2u chart-wrapper" id="net-spendings" style="background-color: #FFCC00; height: 60px;text-align: center;">
-							<div class="chart-title">  <strong> Sales Amount ($) </strong> </div>
-						</div>
-
-						<div class="2u">
-							<div>
-								<span>
-									&nbsp
-							</span>
-							</div>
-						</div>
-						<div class="2u chart-wrapper" id="total-transactions" style="background-color: #FFCC00; height: 60px;text-align: center; ">
-							<div class="chart-title">  <strong> Total Transactions </strong> </div>
-						</div>
-
-						<div>
-								<span>
-									&nbsp
-							</span>
-							</div>
-						<span>
-								<a href='javascript:dc.filterAll();dc.redrawAll();'>
-									<font color="#0000FF">Reset All</font>
-								</a>
-						</span>
-
-				</div>
-
-
-					<div class="row">
-
-						<div class="4u chart-wrapper"  id="merchant-spendings">
-							<div class="chart-title">  <strong> Sales Amount by Merchant ($) </strong>
-							</div>
-						</div>
-
-
-						<div class="6u chart-wrapper"  id="date-chart">
-							<div class="chart-title bold"> <strong> Number of Transactions </strong></div>
-
-						</div>
-
-
 					</div>
 
-					<div class="row">
-						<div class="4u chart-wrapper"  id="paymentGroup-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Payment Type </strong> </div>
-						</div>
-						<div class="4u chart-wrapper" id="zipcode-chart">
-							<div class="chart-title">  <strong> Number of Transactions by ZipCode </strong>
-						 	</div>
-						</div>
-						<div class="3u chart-wrapper" id="spending-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Category </strong>
+
+					<div id="home" style="display: none;">
+
+						<div class="row">
+							<div class="col-md-6" id="net-spendings">
+								<strong> Sales Amount ($) </strong>
+							</div>
+
+							<div class="col-md-6" id="total-transactions">
+								<strong> Total Transactions </strong>
 							</div>
 						</div>
 
-					</div>
+						<div class="row">
+							<div class="col-md-12" id="merchant-spendings">
+								<strong> Sales Amount by Merchant ($) </strong>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12"  id="date-chart">
+								<strong> Number of Transactions </strong>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4"  id="paymentGroup-chart">
+								<strong> Number of Transactions by Payment Type </strong>
+							</div>
+							<div class="col-md-4" id="zipcode-chart">
+								<strong> Number of Transactions by ZipCode </strong>
+							</div>
+							<div class="col-md-4" id="spending-chart">
+								<strong> Number of Transactions by Category </strong>
+							</div>
+
+						</div>
 
 				</div>
 			</div>

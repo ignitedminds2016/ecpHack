@@ -3,7 +3,7 @@ queue()
     .await(makeGraphs);
 
 function makeGraphs(error, apiData) {
-	
+
 //Data Transformations
 	var dataSet = apiData;
 	var dateFormat = d3.time.format("%m/%d/%Y");
@@ -25,8 +25,8 @@ function makeGraphs(error, apiData) {
 
 
 	//Calculate by group
-	var transactionsByDate = datePosted.group(); 
-	var transactionsByPayment = paymentGroup.group(); 
+	var transactionsByDate = datePosted.group();
+	var transactionsByPayment = paymentGroup.group();
 	var transactionsBySpendingType = spendingType.group();
 	var transactionsByZipcode = zipcode.group();
 	var merchantGroup = merchant.group();
@@ -60,15 +60,15 @@ console.log(maxDate);
 
   selectField = dc.selectMenu('#menuselect')
         .dimension(merchant)
-        .group(merchantGroup); 
+        .group(merchantGroup);
 
 		selectField = dc.selectMenu('#menuselect1')
         .dimension(zipcode)
-        .group(transactionsByZipcode); 
+        .group(transactionsByZipcode);
 
 		selectField = dc.selectMenu('#filterselect')
         .dimension(spendingType)
-        .group(transactionsBySpendingType); 
+        .group(transactionsBySpendingType);
 
        dc.dataCount("#row-selection")
         .dimension(cf)

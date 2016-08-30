@@ -2,8 +2,9 @@
 
 <html>
 	<head>
-		<title>Node JS and D3 Demo</title>
+		<title>YAMM</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
@@ -13,128 +14,132 @@
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
 
+		<link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
 
-			<link rel="stylesheet" href="css/dc.css" />
-<link rel="stylesheet" href="css/stylenew.css" />
+		<link rel="stylesheet" href="css/dc.css" />
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+
+		<script language="javascript">
+			function showfileUpload(){
+			    $("#filters").hide();
+				$("#home").hide();
+				$("#fileupload").show();
+			}
+			function showhome(){
+				$("#filters").show();
+			    $("#home").hide();
+				$("#fileupload").hide();
+			}
+			function submitbutton(){
+				queryparams();
+				$("#filters").show();
+			    $("#home").show();
+			    $("#fileupload").hide();
+			}
+			function resetData() {
+				loaddata1();
+			}
+			window.onload = function() {
+				loaddata("85027", "Restaurant");
+			}
+
+		</script>
 	</head>
+
 	<body>
-		<div id="wrapper">
 
-			<!-- Header -->
-			<div id="header">
-				<div class="container">
-
-					<!-- Logo -->
-					<div id="logo">
-						<h1><a href="#">Merchant Sales Analysis</a></h1>
+		<div class="wrapper">
+				<nav class="navbar navbar-default">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<a class="navbar-brand" href="#">YAMM</a>
+							<li><a href="#home" onClick="showhome()">Home</a></li>
+				  			<li><a href="#fileupload" onClick="showfileUpload()">File Upload</a></li>
+				  			<li><a href="#faq">FAQs</a></li>
+				  			<li><a href="#help">Help</a></li>
+						</ul>
 					</div>
-
-					<!-- Nav -->
-
-				</div>
-			</div>
-			<!-- /Header -->
-
-			<div id="page" style="margin-top:-61px;">
+				</nav>
 
 				<div class="container">
-
-					<div class="row">
-						<div class="2u chart-wrapper" id="menuselect" style="background-color: #FFCC00; height: 60px;">
-							<div class="chart-title">  <strong> By Merchant  </strong> </div>
-						</div>
-
-						<div class="2u">
-							<div>
-								<span>
-									&nbsp
-							</span>
+					<div id="filters" style="display: inline;">
+						<div class="frame">
+							<div class="distance-y" id="menuselect1">
+								<label>Zip Code:</label>
+							</div>
+							<div class="distance-y" id="filterselect">
+								<label>Category:</label>
+							</div>
+							<div id="filterselect1">
+								<button type="button" class="btn btn-primary distance-x" id="submitbutton" onClick="submitbutton()">YAMM IT!</button>
+								<button type="button" class="btn btn-primary" onClick="resetData()">Reset All</button>
 							</div>
 						</div>
-
-						<div class="2u chart-wrapper" id="net-spendings" style="background-color: #FFCC00; height: 60px;text-align: center;">
-							<div class="chart-title">  <strong> Sales Amount ($) </strong> </div>
-						</div>
-
-						<div class="2u">
-							<div>
-								<span>
-									&nbsp
-							</span>
-							</div>
-						</div>
-						<div class="2u chart-wrapper" id="total-transactions" style="background-color: #FFCC00; height: 60px;text-align: center; ">
-							<div class="chart-title">  <strong> Total Transactions </strong> </div>
-						</div>
-
-						<div>
-								<span>
-									&nbsp
-							</span>
-							</div>
-						<span>
-								<a href='javascript:dc.filterAll();dc.redrawAll();'>
-									<font color="#0000FF">Reset All</font>
-								</a>
-						</span>
-
-				</div>
-
-
-					<div class="row">
-
-						<div class="4u chart-wrapper"  id="merchant-spendings">
-							<div class="chart-title">  <strong> Sales Amount by Merchant ($) </strong>
-							</div>
-						</div>
-
-
-						<div class="6u chart-wrapper"  id="date-chart">
-							<div class="chart-title bold"> <strong> Number of Transactions </strong></div>
-
-						</div>
-
-
 					</div>
 
-					<div class="row">
-						<div class="4u chart-wrapper"  id="paymentGroup-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Payment Type </strong> </div>
-						</div>
 
+					<div id="home" style="display: inline;">
 
-						<div class="4u chart-wrapper" id="zipcode-chart">
-							<div class="chart-title">  <strong> Number of Transactions by ZipCode </strong>
-						 	</div>
-						</div>
+						<div class="row">
+							<div class="col-md-6" id="net-spendings">
+								<strong> Sales Amount ($) </strong>
+							</div>
 
-						<div class="3u chart-wrapper" id="spending-chart">
-							<div class="chart-title">  <strong> Number of Transactions by Category </strong>
+							<div class="col-md-6" id="total-transactions">
+								<strong> Total Transactions </strong>
 							</div>
 						</div>
 
+						<div class="row">
+							<div class="col-md-12" id="merchant-spendings">
+								<strong> Sales Amount by Merchant ($) </strong>
+							</div>
+						</div>
 
-					</div>
+						<div class="row">
+							<div class="col-md-12"  id="date-chart">
+								<strong> Number of Transactions </strong>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4"  id="paymentGroup-chart">
+								<strong> Number of Transactions by Payment Type </strong>
+							</div>
+							<div class="col-md-4" id="zipcode-chart">
+								<strong> Number of Transactions by ZipCode </strong>
+							</div>
+							<div class="col-md-4" id="spending-chart">
+								<strong> Number of Transactions by Category </strong>
+							</div>
+
+						</div>
 
 				</div>
 			</div>
 
-		<form id    =  "uploadForm"
-          enctype   =  "multipart/form-data"
-          action    =  "/api/upload"
-          method    =  "post">
-          <input type="file" name="userData" />
-          <input type="submit" value="Upload CSV Data" name="submit">
-        </form>
-
+			<div id="fileupload" style="display: none;">
+			  <form id    =  "uploadForm"
+	          enctype   =  "multipart/form-data"
+	          action    =  "/api/upload"
+	          method    =  "post">
+	          <label for="fileUpload">Upload Your File here</label>
+	          <input type="file" name="userData" />
+	          <input type="submit" value="Upload" name="submit">
+	       	 </form>
+			</div>
 		</div>
 
-<script src='js/crossfilter.js' type='text/javascript'></script>
-<script src='js/d3.js' type='text/javascript'></script>
-<script src='js/dc.js' type='text/javascript'></script>
-<script src='js/queue.js' type='text/javascript'></script>
-<script src='js/Dashboard.js' type='text/javascript'></script>
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' type="text/javascript"></script>
+		<script src='js/crossfilter.js' type='text/javascript'></script>
+		<script src='js/d3.js' type='text/javascript'></script>
+		<script src='js/dc.js' type='text/javascript'></script>
+		<script src='js/queue.js' type='text/javascript'></script>
+		<script src='js/Dashboard.js' type='text/javascript'></script>
+		<script src='js/Dashboard2.js' type='text/javascript'></script>
+		<script src='js/page.js' type='text/javascript'></script>
 	</body>
 </html>
